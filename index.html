@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./lib/css/styles.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <header class="header">
+      <div>
+        Patient Name:
+        <span class="banner-value" id="patient_name">..</span>
+        Gender:
+        <span class="banner-value" id="gender">..</span>
+        DOB:
+        <span class="banner-value" id="dob">..</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-overview">
+        <div class="small-card">
+          <div>Height</div>
+          <div class="ob-value" id="height">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Weight</div>
+          <div class="ob-value" id="weight">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Systolic Blood Pressure</div>
+          <div class="ob-value" id="sys">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>Diastolic Blood Pressure</div>
+          <div class="ob-value" id="dia">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>LDL</div>
+          <div class="ob-value" id="ldl">undefined</div>
+        </div>
+        <div class="small-card">
+          <div>HDL</div>
+          <div class="ob-value" id="hdl">undefined</div>
+        </div>
+      </div>
+
+      <div class="big-card">
+        <div class="card">
+          <div class="title">
+            Radiology Decision Support
+          </div>
+<!--          <h2></h2>-->
+          <p>Click on the button at the bottom of this page to open the login form.</p>
+          <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+          <button class="open-button" onclick="openForm()">Low Back Pain MRI Assessment</button>
+          <p></p>
+
+          <div class="open-button">
+            <a href="https://patient-browser.smarthealthit.org/index.html?config=r3-open-sandbox#/">Patient Browser</a>
+          </div>
+
+        </div>
+
+
+
+        <div class="card">
+          <div class="title">
+            Diagnostic (Labs and Imaging) Requests
+          </div>
+          <ul id="med_list"></ul>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+
+
+  <div class="form-popup" id="myForm">
+    <form action="/Results.html" class="form-container" ><!--method="get"-->
+      <h1>Does the patient have any of the following?</h1>
+
+ <!--     <label for="criteria1"><b>Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use</b></label>
+      <input type="text" placeholder="" name="criteria1" required>-->
+
+<!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
+      <label >Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use</label>
+      <select  onchange="changeToYes()">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+      <label> Suspicion of cancer, infection, or immunosuppression</label>
+      <select  onchange="changeToYes()">   <!--id="criteria2" name="criteria2">-->
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>>
+      </select>
+      <p></p>
+
+
+      <label >Surgery or intervention
+        candidate with persistent or progressive symptoms during or following 6 weeks of
+        conservative management</label>
+      <select  onchange="changeToYes()">  <!--id="criteria3" name="criteria3">-->
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+      <label>Suspected cauda equina syndrome or rapidly progressive neurologic
+        deficit</label>
+      <select  onchange="changeToYes()">  <!--id="criteria4" name="criteria4">-->
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+
+      <label>New or progressing symptoms or clinical findings with
+        history of prior lumbar surgery</label>
+      <select  onchange="changeToYes()">  <!--id="criteria5" name="criteria5">-->
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+
+      <!--
+
+      <label for="criteria2"><b>Suspicion of cancer, infection, or immunosuppression</b></label>
+      <input type="password" placeholder="No" name="criteria2" required>
+
+
+      <label for="criteria1"><b>Surgery or intervention
+        candidate with persistent or progressive symptoms during or following 6 weeks of
+        conservative management.</b></label>
+      <input type="text" placeholder="" name="criteria1" required
+
+
+
+      <label for="criteria1"><b>Suspected cauda equina syndrome or rapidly progressive neurologic
+        deficit</b></label>
+      <input type="text" placeholder="" name="criteria1" required
+
+      <label for="criteria1"><b>New or progressing symptoms or clinical findings with
+        history of prior lumbar surgery.
+      </b></label>
+      <input type="text" placeholder="" name="criteria1" required
+
+-->
+
+
+
+
+
+      <!--type="submit" -->
+      <button  type="button"  class="btn" onclick="closeForm()">Submit</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+
+  <script src='./lib/js/fhir-client.js'></script>
+<!--   <script src="./lib/js/get-data.js"></script> -->
+
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+   <script src="./lib/js/get-data-test.js"></script>
+
+  <script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+
+}
+
+function closeForm() {
+  // document.getElementById("myForm").style.display = "none";
+  window.open(
+          "\Results.html", "_blank");
+}
+
+  function changeToYes() {
+    // document.getElementById("myForm").style.display = "none";
+    window.open(
+            "\NegResults.html", "_blank");
+
+}
+</script>
+
+</body>
+
+</html>
