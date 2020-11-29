@@ -817,119 +817,119 @@
 
 
   <script src='./lib/js/fhir-client.js'></script>
-  <!--  <script src="./lib/js/get-data.js"></script> -->
+  <script src="./lib/js/get-data.js"></script> 
 
  <!-- uncomment below script and comment above script to switch for easy local testing -->
- <script src="./lib/js/get-data-test.js"></script>
+  <!-- <script src="./lib/js/get-data-test.js"></script> -->
 
-  <script>
+ <script>
 function openForm() {
-  cancelForm();
-  document.getElementById("myForm").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm").style.display = "block";
 
 }
 
 
 function openForm_CC() {
-  cancelForm();
-  document.getElementById("myForm_CC").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_CC").style.display = "block";
 
 }
 
 function closeForm_CC() {
-  cancelForm();
-  document.getElementById("myForm_CC_Results").style.display = "block";
-  //window.open(
-  //        "\Results_CC.html", "myForm_CC");
+ cancelForm();
+ document.getElementById("myForm_CC_Results").style.display = "block";
+ //window.open(
+ //        "\Results_CC.html", "myForm_CC");
 }
 
 
 function closeForm() {
-  // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results.html", "_blank");
+ // document.getElementById("myForm").style.display = "none";
+ window.open(
+         "\Results.html", "_blank");
 }
 
 
 function openForm_CAD() {
-  cancelForm();
-  document.getElementById("myForm_CAD").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_CAD").style.display = "block";
 
 }
 
 function closeForm_CAD() {
-  // document.getElementById("myForm").style.display = "none";
- // window.open(
-  //        "\Results_CAD.html", "myForm_CAD");
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+// window.open(
+ //        "\Results_CAD.html", "myForm_CAD");
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 function openForm_IE() {
-  cancelForm();
-  document.getElementById("myForm_IE").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_IE").style.display = "block";
 
 }
 
 function closeForm_IE() {
-  // document.getElementById("myForm").style.display = "none";
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
 function openForm_AHW() {
-  cancelForm();
-  document.getElementById("myForm_AHW").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_AHW").style.display = "block";
 
 }
 
 function closeForm_AHW() {
-  // document.getElementById("myForm").style.display = "none";
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
 function openForm_S() {
-  cancelForm();
-  document.getElementById("myForm_S").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_S").style.display = "block";
 
 }
 
 function closeForm_S() {
-  // document.getElementById("myForm").style.display = "none";
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
 function openForm_CLD() {
-  cancelForm();
-  //document.getElementById("myForm_CLD")[0].reset();
-  document.getElementById("myForm_CLD").style.display = "block";
+ cancelForm();
+ //document.getElementById("myForm_CLD")[0].reset();
+ document.getElementById("myForm_CLD").style.display = "block";
 
 }
 
 function closeForm_CLD() {
-  // document.getElementById("myForm").style.display = "none";
+ // document.getElementById("myForm").style.display = "none";
 
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
 
 function openForm_CD() {
-  cancelForm();
-  document.getElementById("myForm_CD").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_CD").style.display = "block";
 
 }
 
 function closeForm_CD() {
-  // document.getElementById("myForm").style.display = "none";
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -938,29 +938,29 @@ function closeForm_CD() {
 
 
 function openForm_D() {
-  cancelForm();
-  document.getElementById("myForm_D").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_D").style.display = "block";
 
 }
 
 function closeForm_D() {
-  // document.getElementById("myForm").style.display = "none";
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
 
 function openForm_M() {
-  cancelForm();
-  document.getElementById("myForm_M").style.display = "block";
+ cancelForm();
+ document.getElementById("myForm_M").style.display = "block";
 
 }
 
 function closeForm_M() {
-  // document.getElementById("myForm").style.display = "none";
-  cancelForm();
-  document.getElementById("myForm_No_Results").style.display = "block";
+ // document.getElementById("myForm").style.display = "none";
+ cancelForm();
+ document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -969,19 +969,19 @@ function closeForm_M() {
 
 
 function cancelForm() {
-  document.getElementById("myForm").style.display = "none";
-  document.getElementById("myForm_CC").style.display = "none";
-  document.getElementById("myForm_CAD").style.display = "none";
-  document.getElementById("myForm_IE").style.display = "none";
-  document.getElementById("myForm_AHW").style.display = "none";
-  document.getElementById("myForm_S").style.display = "none";
-  document.getElementById("myForm_CLD").style.display = "none";
-  document.getElementById("myForm_CD").style.display = "none";
-  document.getElementById("myForm_D").style.display = "none";
-  document.getElementById("myForm_M").style.display = "none";
-  document.getElementById("myForm_CC_Results").style.display = "none";
-  document.getElementById("myForm_No_Results").style.display = "none";
-  <!-- location.reload();-->
+ document.getElementById("myForm").style.display = "none";
+ document.getElementById("myForm_CC").style.display = "none";
+ document.getElementById("myForm_CAD").style.display = "none";
+ document.getElementById("myForm_IE").style.display = "none";
+ document.getElementById("myForm_AHW").style.display = "none";
+ document.getElementById("myForm_S").style.display = "none";
+ document.getElementById("myForm_CLD").style.display = "none";
+ document.getElementById("myForm_CD").style.display = "none";
+ document.getElementById("myForm_D").style.display = "none";
+ document.getElementById("myForm_M").style.display = "none";
+ document.getElementById("myForm_CC_Results").style.display = "none";
+ document.getElementById("myForm_No_Results").style.display = "none";
+ <!-- location.reload();-->
 
 
 }
