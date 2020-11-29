@@ -53,13 +53,9 @@
             Radiology Decision Support
           </div>
 <!--          <h2></h2>-->
-          <p>Click the button to force the Low Back Pain MRI Assessment</p>
+          <p>Launch an Assessment tool here</p>
 
-          <button class="open-button" onclick="openForm()">Low Back Pain MRI Assessment</button>
-          <p></p>
 
-          <button class="open-button" onclick="openForm_CC()">Colorectal Cancer Screening</button>
-          <p></p>
 
           <button class="open-button" onclick="openForm_CAD()">Coronary Artery Disease Screening</button>
           <p></p>
@@ -85,6 +81,11 @@
           <button class="open-button" onclick="openForm_M()">Myelopathy Assessment</button>
           <p></p>
 
+          <button class="open-button" onclick="openForm()">Low Back Pain MRI Assessment</button>
+          <p></p>
+
+          <button class="open-button" onclick="openForm_CC()">Colorectal Cancer Screening</button>
+          <p></p>
 
 
           <div class="open-button">
@@ -277,7 +278,7 @@
 
 
       <!--type="submit" -->
-      <button  type="button"  class="btn" onclick="closeForm()">Submit</button>
+      <button  type="button"  class="btn" onclick="closeForm_CC()">Submit</button>
       <button type="button" class="btn cancel" onclick="cancelForm()">Close</button>
     </form>
   </div>
@@ -293,6 +294,15 @@
            <input type="text" placeholder="" name="criteria1" required>-->
 
       <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
+      <label >Initial imaging </label>
+      <select onchange="closeForm_CAD()">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+
+      </select>
+      <p></p>
+
+
       <label >Asymptomatic patient? </label>
       <select>
         <option value="No">No</option>
@@ -300,7 +310,7 @@
       </select>
       <p></p>
 
-      <label >Low risk for coronary artery disease. Initial imaging</label>
+      <label >Low risk for coronary artery disease</label>
       <select  onchange="changeToYes_CAD_1()">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -308,7 +318,7 @@
       <p></p>
 
 
-      <label>  Intermediate risk for coronary artery disease. Initial imaging</label>
+      <label>  Intermediate risk for coronary artery disease</label>
       <select  onchange="changeToYes_CAD_2()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -316,7 +326,7 @@
       <p></p>
 
 
-      <label > High risk for coronary artery disease. Initial imaging</label>
+      <label > High risk for coronary artery disease</label>
       <select  onchange="changeToYes_CAD_3()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -342,7 +352,15 @@
            <input type="text" placeholder="" name="criteria1" required>-->
 
       <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
-      <label >Suspected infective endocarditis. Initial imaging</label>
+      <label >Initial imaging</label>
+      <select  >
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+      <label >Suspected infective endocarditis</label>
       <select  onchange="changeToYes_IE_1()">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -402,7 +420,15 @@
            <input type="text" placeholder="" name="criteria1" required>-->
 
       <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
-      <label >Acute blunt or penetrating trauma to the hand or wrist. Initial imaging</label>
+      <label > Initial imaging</label>
+      <select  >
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+      <label >Acute blunt or penetrating trauma to the hand or wrist</label>
       <select  onchange="changeToYes_AHW_1()">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -410,7 +436,7 @@
       <p></p>
 
 
-      <label> Suspect acute hand or wrist trauma.  Initial radiographs negative or equivocal. Next imaging study. </label>
+      <label> Suspect acute hand or wrist trauma.  Initial radiographs negative or equivocal. </label>
       <select  onchange="changeToYes_AHW_2()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -418,7 +444,7 @@
       <p></p>
 
 
-      <label >Acute  wrist  fracture  on  radiographs.  Suspect  wrist  tendon  or  ligament  trauma.  Next  imaging study.</label>
+      <label >Acute  wrist  fracture  on  radiographs.  Suspect  wrist  tendon  or  ligament  trauma.  </label>
       <select  onchange="changeToYes_AHW_3()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -426,7 +452,7 @@
       <p></p>
 
 
-      <label>Initial radiographs showing distal radioulnar joint or carpal malalignment in the absence of fracture. Next imaging study.</label>
+      <label>Initial radiographs showing distal radioulnar joint or carpal malalignment in the absence of fracture.</label>
       <select  onchange="changeToYes_AHW_4()">  <!--id="criteria4" name="criteria4">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -435,21 +461,21 @@
 
 
 
-      <label>Acute  hand  fracture  on  radiographs.  Suspect  hand  tendon  or  ligament  trauma.  Next  imaging study.</label>
+      <label>Acute  hand  fracture  on  radiographs.  Suspect  hand  tendon  or  ligament  trauma. </label>
       <select  onchange="changeToYes_AHW_5()">  <!--id="criteria5" name="criteria5">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
       </select>
       <p></p>
 
-      <label>Initial   radiographs   showing   metacarpophalangeal,    proximal   interphalangeal,   or   distal interphalangeal joint malalignment in the absence of fracture. Next imaging study.</label>
+      <label>Initial   radiographs   showing   metacarpophalangeal,    proximal   interphalangeal,   or   distal interphalangeal joint malalignment in the absence of fracture. </label>
       <select  onchange="changeToYes_AHW_6()">  <!--id="criteria5" name="criteria5">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
       </select>
       <p></p>
 
-      <label>Suspect penetrating  trauma  with  a  foreign  body  in  the  soft  tissues in  the  hand  or  wrist. Initial radiographs are negative. Next imaging study.</label>
+      <label>Suspect penetrating  trauma  with  a  foreign  body  in  the  soft  tissues in  the  hand  or  wrist. Initial radiographs are negative. </label>
       <select  onchange="changeToYes_AHW_7()">  <!--id="criteria5" name="criteria5">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -496,7 +522,24 @@
       <h1>Does the patient have any of the following?</h1>
 
 
-      <label> Presyncope or  syncope. Clinical  suspicion  for  cardiovascular  etiology  based  on  history,physical examination, and ECG findings. Initial imaging.</label>
+      <label> Presyncope or syncope</label>
+      <select  onclick="closeForm_S()">   <!--id="criteria2" name="criteria2">-->
+        <option value="Yes">Yes</option>>
+        <option value="No">No</option>
+      </select>
+      <p></p>
+
+      <label> Initial Imaging</label>
+      <select  onclick="closeForm_S()">  <!--id="criteria2" name="criteria2">-->
+        <option value="Yes">Yes</option>>
+        <option value="No">No</option>
+      </select>
+      <p></p>
+
+
+
+
+      <label>  Clinical  suspicion  for  cardiovascular  etiology  based  on  history,physical examination, and ECG findings. </label>
       <select  onchange="changeToYes_S_1()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -504,7 +547,7 @@
       <p></p>
 
 
-      <label >Presyncope or syncope. Low probability of cardiovascular etiology based on history, physicalexamination, and ECG findings. Initial imaging.</label>
+      <label >Low probability of cardiovascular etiology based on history, physicalexamination, and ECG findings. </label>
       <select  onchange="changeToYes_S_2()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -531,7 +574,15 @@
            <input type="text" placeholder="" name="criteria1" required>-->
 
       <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
-      <label >Chronic liver disease. Diagnosis and staging of liver fibrosis. Initial imaging. </label>
+      <label >Chronic liver disease </label>
+      <select  onchange="closeForm_CLD()">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+      <p></p>
+
+
+      <label > Diagnosis and staging of liver fibrosis. Initial imaging. </label>
       <select  onchange="changeToYes_CLD_1()">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -539,7 +590,7 @@
       <p></p>
 
 
-      <label> Chronic liver disease. No prior diagnosis of hepatocellular carcinoma (HCC). Screening andsurveillance for HCC. </label>
+      <label>  No prior diagnosis of hepatocellular carcinoma (HCC). Screening andsurveillance for HCC. </label>
       <select  onchange="changeToYes_CLD_2()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -547,7 +598,7 @@
       <p></p>
 
 
-      <label >Chronic liver disease. Previous diagnosis of HCC. Post-treatment monitoring for HCC. </label>
+      <label > Previous diagnosis of HCC. Post-treatment monitoring for HCC. </label>
       <select  onchange="changeToYes_CLD_3()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -617,7 +668,17 @@
            <input type="text" placeholder="" name="criteria1" required>-->
 
       <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
-      <label >Oropharyngeal dysphagia with an attributable cause. Initial imaging.</label>
+      <label > Initial imaging</label>
+      <select  onchange="closeForm_D()">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+
+      </select>
+      <p></p>
+
+
+
+      <label >Oropharyngeal dysphagia with an attributable cause</label>
       <select  onchange="changeToYes_D_1()">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -625,7 +686,7 @@
       <p></p>
 
 
-      <label> Unexplained oropharyngeal dysphagia. Initial imaging.</label>
+      <label> Unexplained oropharyngeal dysphagia</label>
       <select  onchange="changeToYes_D_2()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -633,7 +694,7 @@
       <p></p>
 
 
-      <label >Retrosternal dysphagia in immunocompetent patients. Initial imaging.</label>
+      <label >Retrosternal dysphagia in immunocompetent patients</label>
       <select  onchange="changeToYes_D_3()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -641,7 +702,7 @@
       <p></p>
 
 
-      <label> Retrosternal dysphagia in immunocompromised patients. Initial imaging.</label>
+      <label> Retrosternal dysphagia in immunocompromised patients</label>
       <select  onchange="changeToYes_D_4()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -649,7 +710,7 @@
       <p></p>
 
 
-      <label >Early postoperative dysphagia. Oropharyngeal or retrosternal. Initialimaging</label>
+      <label >Early postoperative dysphagia. Oropharyngeal or retrosternal</label>
       <select  onchange="changeToYes_D_5()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -657,7 +718,7 @@
       <p></p>
 
 
-      <label >Delayed (greater than 1 month) postoperative development of dysphagia. Oropharyngeal or retrosternal. Initial imaging.</label>
+      <label >Delayed (greater than 1 month) postoperative development of dysphagia. Oropharyngeal or retrosternal</label>
       <select  onchange="changeToYes_D_6()">  <!--id="criteria3" name="criteria3">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -682,7 +743,16 @@
            <input type="text" placeholder="" name="criteria1" required>-->
 
       <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
-      <label >Acute onset myelopathy. Initial imaging.</label>
+      <label > Initial imaging</label>
+      <select  >
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+      <p></p>
+
+
+
+      <label >Acute onset myelopathy</label>
       <select  onchange="changeToYes_M_1()">
         <option value="No">No</option>
         <option value="Yes">Yes</option>
@@ -690,7 +760,7 @@
       <p></p>
 
 
-      <label> Chronic or progressive myelopathy. Initial imaging.</label>
+      <label> Chronic or progressive myelopathy. </label>
       <select  onchange="changeToYes_M_2()">   <!--id="criteria2" name="criteria2">-->
         <option value="No">No</option>
         <option value="Yes">Yes</option>>
@@ -711,11 +781,46 @@
 
 
 
+  <!-- Colon Cancer -->
+  <div class="form-popup" id="myForm_CC_Results">
+    <form action="/Results.html" class="form-container" ><!--method="get"-->
+      <h1>No recommendations for this clinical scenario</h1>
+
+      <!--     <label for="criteria1"><b>Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use</b></label>
+           <input type="text" placeholder="" name="criteria1" required>-->
+
+      <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
+     <!--  <label >Average-risk individual. Age greater than or equal to 50 years. Initial screening, then follow-up every 5 years after initial negative screen.</label> -->
+
+      <button  type="button"  class="btn" onclick="cancelForm()">Dismiss</button>
+
+    </form>
+  </div>
+
+
+  <div class="form-popup" id="myForm_No_Results">
+    <form action="/Results.html" class="form-container" ><!--method="get"-->
+      <h1>No recommendations for this clinical scenario</h1>
+
+      <!--     <label for="criteria1"><b>Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use</b></label>
+           <input type="text" placeholder="" name="criteria1" required>-->
+
+      <!--      <input type="Low velocity trauma, osteoporosis, elderly individual, or chronic steroid use" name="criteria1" id="criteria1" value="value"  required/>-->
+      <!--  <label >Average-risk individual. Age greater than or equal to 50 years. Initial screening, then follow-up every 5 years after initial negative screen.</label> -->
+
+      <button  type="button"  class="btn" onclick="ReloadEverything()">Dismiss</button>
+<!--  onclick="cancelForm() -->
+    </form>
+  </div>
+
+
+
+
   <script src='./lib/js/fhir-client.js'></script>
-<!--   <script src="./lib/js/get-data.js"></script> -->
+  <script src="./lib/js/get-data.js"></script> 
 
   <!-- uncomment below script and comment above script to switch for easy local testing -->
-   <script src="./lib/js/get-data-test.js"></script>
+ <!--  <script src="./lib/js/get-data-test.js"></script> -->
 
   <script>
 function openForm() {
@@ -732,9 +837,10 @@ function openForm_CC() {
 }
 
 function closeForm_CC() {
-  // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_CC.html", "myForm_CC");
+  cancelForm();
+  document.getElementById("myForm_CC_Results").style.display = "block";
+  //window.open(
+  //        "\Results_CC.html", "myForm_CC");
 }
 
 
@@ -753,8 +859,10 @@ function openForm_CAD() {
 
 function closeForm_CAD() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_CAD.html", "myForm_CAD");
+ // window.open(
+  //        "\Results_CAD.html", "myForm_CAD");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 function openForm_IE() {
@@ -765,8 +873,8 @@ function openForm_IE() {
 
 function closeForm_IE() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_IE.html", "myForm_IE");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -778,8 +886,8 @@ function openForm_AHW() {
 
 function closeForm_AHW() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_AHW.html", "myForm_AHW");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -791,21 +899,23 @@ function openForm_S() {
 
 function closeForm_S() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_S.html", "myForm_S");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
 function openForm_CLD() {
   cancelForm();
+  //document.getElementById("myForm_CLD")[0].reset();
   document.getElementById("myForm_CLD").style.display = "block";
 
 }
 
 function closeForm_CLD() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_CLD.html", "myForm_CLD");
+
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -818,8 +928,8 @@ function openForm_CD() {
 
 function closeForm_CD() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_CD.html", "myForm_D");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -835,8 +945,8 @@ function openForm_D() {
 
 function closeForm_D() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_D.html", "myForm_D");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
 
 
@@ -849,11 +959,9 @@ function openForm_M() {
 
 function closeForm_M() {
   // document.getElementById("myForm").style.display = "none";
-  window.open(
-          "\Results_M.html", "myForm_M");
+  cancelForm();
+  document.getElementById("myForm_No_Results").style.display = "block";
 }
-
-
 
 
 
@@ -871,9 +979,22 @@ function cancelForm() {
   document.getElementById("myForm_CD").style.display = "none";
   document.getElementById("myForm_D").style.display = "none";
   document.getElementById("myForm_M").style.display = "none";
+  document.getElementById("myForm_CC_Results").style.display = "none";
+  document.getElementById("myForm_No_Results").style.display = "none";
+  <!-- location.reload();-->
 
 
 }
+
+
+function ReloadEverything() {
+
+ location.reload()
+
+
+}
+
+
 
 
   function changeToYes() {
